@@ -2,7 +2,7 @@
 The bread and butter of vim is the ability to add plugins that will **drastically** change its behaviour. Some of them allow for incredible working efficiency. We will start by installing `vundle`, and then installing other plugins afterwards:
 
 ## Vundle
-Vundle is a vim plugin manager. In a normal environment, we would be able to install all plugins from the internet and vundle will fetch it for us. However, since this is not the case for us, we will have to download each plugin locally. Let's start by installing vundle.
+Vundle is a vim plugin manager. In a normal environment, we would be able to install all plugins from the internet and vundle will fetch it for us. However, for people without an active internet connection on their work environment, we will have to download each plugin locally from another computer. Let's start by installing vundle.
 
 1. Make the following directory `~/.vim/bundle`
 2. Download the vundle repo from https://github.com/VundleVim/Vundle.vim
@@ -127,7 +127,7 @@ Installation steps:
 1. in the cloned repo, run the following git command to clone all of the repo's dependencies: `git submodule update --init --recursive`.
 2. Install YCM with vundle (it should fail - it's OK).
 3. Create a temp directory and cd into it. For reference, we will call it `temp` following this line.
-4. Inside `temp`, run `cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp` -DUSE_SYSTEM_LIBCLANG=ON.
+4. Inside `temp`, run `cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp -DUSE_SYSTEM_LIBCLANG=ON`.
 5. Now run `cmake --build . --target ycm_core --config Release`.
 6. In vim, run `:YcmRestartServer`.
     * If this fails because of different python version, add the following line to your `vimrc`: `let g:ycm_server_python_interpreter='<python>'` where `<python>` is the path to the python interpreter you used to build YCM.
